@@ -9,4 +9,4 @@ async function gettingImg(query, page, perPage) {
   return response;
 }
 
-//try
+//try to solve
