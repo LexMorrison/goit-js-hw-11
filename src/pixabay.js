@@ -8,5 +8,3 @@ async function gettingImg(query, page, perPage) {
   const response = await axios.get(url);
   return response;
 }
-
-//try to solve proble
