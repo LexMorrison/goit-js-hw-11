@@ -1,0 +1,30 @@
+body {
+  background-color: grey;
+}
+
+a {
+  text-decoration: none;
+}
+
+.load_more {
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.style-form {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery {
+  margin-top: 100px;
+}
+
+.info-item {
+  color: blanchedalmond;
+  text-decoration: none;
+}
