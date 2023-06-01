@@ -1,9 +1,9 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
-import { renderGallery } from './render.js';
-import { gettingImg } from './pixabay.js';
-import './style.css';
+import { renderGallery } from './js/render.js';
+import { gettingImg } from './js/pixabay.js';
+import './styles/style.css';
 
 const form = document.querySelector('#search-form');
 const galleryList = document.querySelector('.gallery');
@@ -28,6 +28,7 @@ async function onSearch(evt) {
   try {
     const { data } = await gettingImg(query, page, perPage);
     if (data.totalHits === 0) {
+      loadMore.classList.add('hidden');
       wrongSearch();
     } else {
       renderGallery(data.hits);
