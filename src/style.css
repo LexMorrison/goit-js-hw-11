@@ -6,6 +6,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .load_more {
   display: flex;
   justify-content: center;
