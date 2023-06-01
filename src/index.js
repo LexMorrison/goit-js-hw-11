@@ -1,6 +1,4 @@
-// Описан в документации
 import SimpleLightbox from 'simplelightbox';
-// Дополнительный импорт стилей
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
 import { renderGallery } from './render.js';
@@ -16,7 +14,7 @@ loadMore.addEventListener('click', onClick);
 let query = '';
 let page = 1;
 const perPage = 40;
-let SimpleLightbox;
+let lightbox;
 
 async function onSearch(evt) {
   evt.preventDefault();
@@ -33,7 +31,7 @@ async function onSearch(evt) {
       wrongSearch();
     } else {
       renderGallery(data.hits);
-      SimpleLightbox = new SimpleLightbox('.gallery a', {
+      lightbox = new SimpleLightbox('.gallery a', {
         captions: true,
         captionsData: 'alt',
         captionDelay: 300,
@@ -55,7 +53,7 @@ async function onClick(event) {
   try {
     const { data } = await gettingImg(query, page, perPage);
     renderGallery(data.hits);
-    SimpleLightbox = new SimpleLightbox('.gallery a', {
+    lightbox = new SimpleLightbox('.gallery a', {
       captions: true,
       captionsData: 'alt',
       captionDelay: 300,
